@@ -1,0 +1,86 @@
+% note-template.tex
+% a extremely simple note template
+
+\documentclass{note}
+\title{\LaTeX \ Note Template}
+\author{ixtWuko}
+
+\begin{document}
+
+\maketitle
+
+% \tableofcontents
+
+% \begin{abstract}
+%
+% \end{abstract}
+
+
+\section{概述}
+这是一份极其简单的 \LaTeX 笔记模板。
+
+\LaTeX 可以提供优秀的排版，但编写 \LaTeX 文档并不是一件愉快的工作。不论是学习笔记还是阅读笔记，笔记的记录过程应专注于内容，为了减少 \LaTeX 对思维的干扰，这里提供一份简单但可用的笔记模板，包含的功能有：公式、图表、表格、代码。
+
+
+\section{引用}
+\subsection{引文}
+\begin{texcodesample}
+    \begin{quote}
+        当你在凝视深渊的时候，深渊也正在凝视着你。 --- 尼采
+    \end{quote}
+\end{texcodesample}
+
+引文的效果如下：
+\begin{quote}
+    当你在凝视深渊的时候，深渊也正在凝视着你。 --- 尼采
+\end{quote}
+
+\subsection{脚注}
+\begin{texcodesample}
+    正文\footnote{这是一个脚注}
+\end{texcodesample}
+
+脚注内容可以参考本页最后\footnote{这是一个脚注}。
+
+
+\section{公式}
+\begin{texcodesample}
+    $a + b = c$        % 行内公式
+    \[ a + b = c \]    % 行间公式
+\end{texcodesample}
+
+
+\section{图表}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.8\linewidth]{graph-sample.jpg}
+    \caption{图表样例}
+\end{figure}
+
+
+\section{表格}
+\begin{table}[h]
+    \centering
+    \caption{表格样例}
+    \begin{tabular}[c]{ccc}
+        \toprule
+        单元格 & 单元格 & 单元格 \\ \midrule
+        单元格 & 单元格 & 单元格 \\
+        单元格 & 单元格 & 单元格 \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+
+\section{代码}
+代码的排版由listing宏包提供， 可以参考下面的例子。
+
+\begin{texcodesample}
+\begin{lstlisting}[language=C++]
+    int main() {
+        std::cout << "Hello, world" << std::endl;
+    }
+\end{lstlisting}
+\end{texcodesample}
+
+\end{document}
